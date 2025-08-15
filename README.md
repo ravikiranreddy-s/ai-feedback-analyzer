@@ -13,20 +13,6 @@ This is an AI-powered project that analyzes user feedback from product reviews t
 - 🤖 Executive Summary using **ChatGPT API** (GPT-3.5)
 - 📁 Modular code ready for scaling
 
----
-
-## 🗂️ Project Structure
-mini-feedback-analyzer/
-├── data/ # Raw and processed review datasets
-├── outputs/ # Cleaned CSVs, summary markdowns, charts
-├── src/
-│ ├── analyze_reviews.py # Main script with logic
-│ └── gpt_summarizer.py # ChatGPT summarization function
-├── .env # Contains your OpenAI API key (not pushed)
-└── README.md 
-
-
----
 
 ## 🧪 Sample Output
 
