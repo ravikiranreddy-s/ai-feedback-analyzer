@@ -1,58 +1,54 @@
-<<<<<<< HEAD
-# Mini Project: AI-Powered Product Feedback Analyzer
+# 🧠 AI Feedback Analyzer
 
-A one-day portfolio project for beginner AI Product Analysts. It ingests user reviews, runs **AI/ML** (sentiment analysis + topic modeling), and outputs **business-ready insights** with charts and an exec summary.
+This is an AI-powered project that analyzes user feedback from product reviews to extract key insights using NLP and OpenAI's ChatGPT API. It performs sentiment classification, topic modeling, and auto-generates an executive summary to guide product and engineering teams.
 
-## What you get
-- `data/reviews_sample.csv` — sample reviews (replace with real data later)
-- `src/analyze_reviews.py` — end-to-end pipeline (clean → sentiment → topics → insights → charts → summary)
-- `app.py` — optional Streamlit dashboard
-- `outputs/` — where results are saved
-- `requirements.txt` — install dependencies in a virtual env
+---
 
-## Quickstart (Terminal)
+## 🚀 Features
+
+- 🔍 Text Cleaning & Preprocessing
+- 🎯 Sentiment Analysis (using VADER)
+- 🧵 Topic Modeling (using NMF + TF-IDF)
+- 📊 Visualizations (bar chart + word cloud)
+- 🤖 Executive Summary using **ChatGPT API** (GPT-3.5)
+- 📁 Modular code ready for scaling
+
+---
+
+## 🗂️ Project Structure
+mini-feedback-analyzer/
+├── data/ # Raw and processed review datasets
+├── outputs/ # Cleaned CSVs, summary markdowns, charts
+├── src/
+│ ├── analyze_reviews.py # Main script with logic
+│ └── gpt_summarizer.py # ChatGPT summarization function
+├── .env # Contains your OpenAI API key (not pushed)
+└── README.md 
+
+
+---
+
+## 🧪 Sample Output
+
+- ✅ Cleaned dataset with sentiment labels
+- 📈 Top negative themes visualized
+- ☁️ Word cloud for major complaint patterns
+- 🤖 AI-generated business summary using ChatGPT API
+
+---
+
+## 📦 How to Run
+
 ```bash
-# 1) Create and activate a virtual environment (recommended)
-python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
+# 1. Create virtual environment
+python3 -m venv venv
+source venv/bin/activate
 
-# 2) Install requirements
+# 2. Install dependencies
 pip install -r requirements.txt
 
-# 3) Run the pipeline (uses data/reviews_sample.csv by default)
-python src/analyze_reviews.py
+# 3. Add your OpenAI key
+echo "OPENAI_API_KEY=your-api-key-here" > .env
 
-# 4) (Optional) Launch the dashboard
-streamlit run app.py
-```
-
-## Replace with your own data
-Put a CSV at `data/reviews.csv` (or rename the sample). Required columns:
-- `review_id` (int or str)
-- `created_at` (YYYY-MM-DD or any parseable date)
-- `rating` (1–5 optional)
-- `review_text` (the feedback text)
-
-## What the pipeline does
-1. **Clean & prep** text (lowercase, strip punctuation, stopwords).
-2. **Sentiment (AI)** using VADER (fast, no API keys).
-3. **Topics (AI/ML)** with TF-IDF + **NMF** to discover themes.
-4. **Business mapping**: auto-labels topics (e.g., Login, Performance, Pricing, Support, UI/UX, Features).
-5. **KPIs & Insights** per theme (volume, % negative, example quotes).
-6. **Charts** (Top Negative Themes) + **Word Cloud** of negatives.
-7. **Executive summary** in plain business English.
-
-## Outputs
-- `outputs/clean_reviews.csv`
-- `outputs/theme_summary.csv`
-- `outputs/top_issues.png`
-- `outputs/wordcloud_negative.png`
-- `outputs/executive_summary.md`
-
-## Notes
-- This project uses **no paid APIs** and runs on a typical laptop.
-- To impress recruiters, replace the sample CSV with **real reviews** from your target product (export App Store/Play Store or support tickets, where allowed).
-=======
-# ai-feedback-analyzer
-AI-powered tool to extract insights from user feedback using NLP + ChatGPT
->>>>>>> aa0b4abdf4ceb938868a8b8fded8632cbf337449
+# 4. Run the analyzer
+python3 -m src.analyze_reviews
