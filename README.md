@@ -1,6 +1,6 @@
 # 🧠 AI Feedback Analyzer
 
-This is an AI-powered project that analyzes user feedback from product reviews to extract key insights using NLP and OpenAI's ChatGPT API. It performs sentiment classification, topic modeling, and auto-generates an executive summary to guide product and engineering teams.
+This is an AI-powered project that analyzes user feedback from product reviews to extract key insights OpenAI's ChatGPT API and A Few Topic Modeling. It performs sentiment classification, topic modeling, and auto-generates an executive summary to guide product and engineering teams.
 
 ---
 
